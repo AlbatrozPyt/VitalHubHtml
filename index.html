@@ -1,92 +1,107 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VitalHub</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-<header>
-    <nav>
-        <input type="radio" name="check" id="check-1" checked>
-        <input type="radio" name="check" id="check-2">
-        <input type="radio" name="check" id="check-3">
+    <header>
+        <nav>
+            <input type="radio" name="check" id="check-1" checked>
+            <input type="radio" name="check" id="check-2">
+            <input type="radio" name="check" id="check-3">
 
-        <label for="check-1">
-            <img src="./assets/img/VitalHub_Logo.png" alt="">
-        </label>
+            <button onclick="stop()">
+                <label for="check-2">Integrantes</label>
+            </button>
 
-        <label for="check-2">Integrantes</label>
-        <label for="check-3">Apresentação</label>
+            <button onclick="start()">
+                <label for="check-1">
+                    <img src="./assets/img/VitalHub_Logo_White.png" alt="">
+                </label>
+            </button>
 
-        <div class="events">
-            <h1>VitalHub</h1>
+            <button onclick="stop()">
+                <label for="check-3">Apresentação</label>
+            </button>
 
-            <div class="integrants">
-                <div class="card-integrantes">
-                    <img class="imagem" src="./assets/img/eu.jpg" alt="">
+            <div class="events">
+                <h1>VitalHub</h1>
 
-                    <h2>Matheus Enrike</h2>
+                <div class="integrants">
+                    <div class="card-integrantes">
+                        <img class="imagem" src="./assets/img/eu.jpg" alt="">
 
-                    <img src="./assets/img/qr_code.svg" alt="">
+                        <h2>Matheus Enrike</h2>
+
+                        <img src="./assets/img/qr_code.svg" alt="">
+                    </div>
+
+                    <div class="card-integrantes">
+                        <img class="imagem" src="./assets/img/eu.jpg" alt="">
+
+                        <h2>Matheus Enrike</h2>
+
+                        <img src="./assets/img/qr_code.svg" alt="">
+                    </div>
+
+                    <div class="card-integrantes">
+                        <img class="imagem" src="./assets/img/eu.jpg" alt="">
+
+                        <h2>Matheus Enrike</h2>
+
+                        <img src="./assets/img/qr_code.svg" alt="">
+                    </div>
                 </div>
 
-                <div class="card-integrantes">
-                    <img class="imagem" src="./assets/img/eu.jpg" alt="">
-
-                    <h2>Matheus Enrike</h2>
-
-                    <img src="./assets/img/qr_code.svg" alt="">
-                </div>
-
-                <div class="card-integrantes">
-                    <img class="imagem" src="./assets/img/eu.jpg" alt="">
-
-                    <h2>Matheus Enrike</h2>
-
-                    <img src="./assets/img/qr_code.svg" alt="">
-                </div>
+                <video autoplay loop>
+                    <source src="./assets/videos/teste.mp4" type="video/mp4">
+                </video>
             </div>
+        </nav>
+    </header>
 
-            <video poster="assets/img/VitalHub_Logo.png" autoplay loop>
-                <source src="./assets/videos/teste.mp4" type="video/mp4">
-            </video>
-        </div>
-    </nav>
-</header>
+    <main>
+        <section class="inicio">
+            <div class="circles">
+                <div style=" top: 40%; left: 50%" class="circle"></div>
+                <div style=" top: 20%; left: 70%" class="circle"></div>
+                <div style=" top: 10%; left: 30%" class="circle"></div>
+                <div style=" top: 90%; left: 0" class="circle"></div>
+                <div style=" top: 37%; left: 10%" class="circle"></div>
+                <div style=" top: 70%; left: 60%" class="circle"></div>
+                <div style=" top: 90%; left: 30%" class="circle"></div>
+                <div style=" top: 62%; left: 90%" class="circle"></div>
+            </div>
+        </section>
+    </main>
 
-<main>
-    <section class="inicio">
-        <div class="circles">
-            <div
-                    style=" top: 40%; left: 50%"
-                    class="circle"></div>
-            <div
-                    style=" top: 20%; left: 70%"
-                    class="circle"></div>
-            <div
-                    style=" top: 10%; left: 30%"
-                    class="circle"></div>
-            <div
-                    style=" top: 90%; left: 0"
-                    class="circle"></div>
-            <div
-                    style=" top: 37%; left: 10%"
-                    class="circle"></div>
-            <div
-                    style=" top: 70%; left: 60%"
-                    class="circle"></div>
-            <div
-                    style=" top: 90%; left: 30%"
-                    class="circle"></div>
-            <div
-                    style=" top: 62%; left: 90%"
-                    class="circle"></div>
-        </div>
-    </section>
-</main>
+
+    <script>
+        function stop() {
+            let animação = document.getElementsByClassName("circle");
+
+            for (let index = 0; index < animação.length; index++) {
+                let element = animação[index];
+                element.style.display = `none`
+            }
+        }
+
+        function start() {
+            let animação = document.getElementsByClassName("circle");
+
+            for (let index = 0; index < animação.length; index++) {
+                let element = animação[index];
+                element.style.display = `block`
+            }
+        }
+    </script>
 </body>
+
 </html>
